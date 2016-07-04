@@ -33,7 +33,7 @@ $sudo hdparm -I /dev/sdb | grep 'Model Number\|Serial Number\|Firmware Revision\
         Model Number:       ST3500514NS                             
         Serial Number:      9WJ0HN29
         Firmware Revision:  SN11    
-        ***not     frozen***
+        **not**     **frozen**
 ```
 Смотрим количество используемых/доступных блоков
 ```
