@@ -15,8 +15,7 @@ $sudo hdparm -I /dev/sdb | egrep 'Model Number|Serial Number|frozen|LBA48|Sector
 Если "замороженно"(`frozen`), то пока найден один способ "разморозки"(`not     frozen`) устройства, это 
 посылка ОС в suspend to ram.
 
-!!! Вывести ОС из этого состояния можно нажатием любой клавиши клавиатуры или 
-мышки. !!!
+**Вывести ОС из этого состояния можно нажатием любой клавиши клавиатуры или мышки.** 
 
 ```bash
 $ echo mem | sudo tee /sys/power/state
