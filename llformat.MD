@@ -82,8 +82,7 @@ $sudo hdparm -I /dev/sdb | egrep 'Model Number|Serial Number|frozen|LBA48|Sector
 
 **Low Level Format**
 
-Необходимо установит временный мастер пароль(в течении сессии) отличный от `NULL`
-(default). В данном случае это будет `llformat`
+Необходимо установить "непустой" мастер пароль (После "безопасного стирания" пароль будет установлен назад в `NULL`). В данном случае это будет `llformat`
 ```bash
 $sudo hdparm --user-master u --security-set-pass llformat 
 ```
