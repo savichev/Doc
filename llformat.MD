@@ -71,7 +71,7 @@ $sudo hdparm -N777777777 --yes-i-know-what-i-am-doing /dev/sdb
 ```bash
 $sudo hdparm -Np777777777 --yes-i-know-what-i-am-doing /dev/sdb
 ```
-
+После реинициализации устройства или перезагрузки системы, Вы можете разметить и отформатировать Ваше устройство.
 
 ** Low Level Format **
 
