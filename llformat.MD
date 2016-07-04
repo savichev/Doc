@@ -67,7 +67,7 @@ $sudo hdparm -N777777777 --yes-i-know-what-i-am-doing /dev/sdb
         max sectors   = 777777777/976773168, HPA is enabled
 
 Отлично! Устройство поддерживает установку параметра! Ставим параметр на 
-постоянный режим.
+постоянный режим(ключ `p`).
 ```bash
 $sudo hdparm -Np777777777 --yes-i-know-what-i-am-doing /dev/sdb
 ```
