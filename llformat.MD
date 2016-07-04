@@ -2,12 +2,11 @@
 Ищем свое устройство (в данном случае это sdb) и удостоверяемся, что оно "не 
 заморожено" (not     frozen)
 ```bash
-$sudo hdparm -I /dev/sdb | grep 'Model Number\|Serial Number\|Firmware Revision\|frozen\|LBA48\|Sector size'
+$sudo hdparm -I /dev/sdb | egrep 'Model Number|Serial Number|frozen|LBA48|Sector size'
 ```
 
         Model Number:       ST3500514NS                             
         Serial Number:      9WJ0HN29
-        Firmware Revision:  SN11
         LBA48  user addressable sectors:  976773168
         Logical/Physical Sector size:           512 bytes
         not     frozen
@@ -29,12 +28,11 @@ $ echo mem | sudo tee /sys/power/state
 Проверяем состояние "заморозки"
 
 ```bash
-$sudo hdparm -I /dev/sdb | grep 'Model Number\|Serial Number\|Firmware Revision\|frozen\|LBA48\|Sector size'
+$sudo hdparm -I /dev/sdb | egrep 'Model Number|Serial Number|frozen|LBA48|Sector size'
 ```
 
         Model Number:       ST3500514NS                             
         Serial Number:      9WJ0HN29
-        Firmware Revision:  SN11
         LBA48  user addressable sectors:  976773168
         Logical/Physical Sector size:           512 bytes
         not     frozen
@@ -77,12 +75,11 @@ $sudo hdparm -Np777777777 --yes-i-know-what-i-am-doing /dev/sdb
 ```
 После реинициализации устройства или перезагрузки системы, Вы можете разметить и отформатировать Ваше устройство.
 ```bash
-$sudo hdparm -I /dev/sdb | grep 'Model Number\|Serial Number\|Firmware Revision\|frozen\|LBA48\|Sector size'
+$sudo hdparm -I /dev/sdb | egrep 'Model Number|Serial Number|frozen|LBA48|Sector size'
 ```
 
         Model Number:       ST3500514NS                             
         Serial Number:      9WJ0HN29
-        Firmware Revision:  SN11
         LBA48  user addressable sectors:  777777777
         Logical/Physical Sector size:           512 bytes
         not     frozen
