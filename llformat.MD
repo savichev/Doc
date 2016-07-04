@@ -2,9 +2,9 @@
 Ищем свое устройство (в данном случае это sdb) и удостоверяемся, что оно "не 
 заморожено" (not     frozen)
 ```bash
-$sudo hdparm -I /dev/sdb | grep 'Model Number\|Serial 
-Number\|Firmware Revision\|frozen'
-
+$sudo hdparm -I /dev/sdb | grep 'Model Number\|Serial Number\|Firmware Revision\|frozen'
+```
+```
         Model Number:       ST3500514NS                             
         Serial Number:      9WJ0HN29
         Firmware Revision:  SN11    
@@ -17,23 +17,23 @@ Number\|Firmware Revision\|frozen'
 !!! Вывести ОС из этого состояния можно нажатием любой клавиши клавиатуры или 
 мышки. !!!
 
-```
+```bash
 $ echo mem | sudo tee /sys/power/state
+```
+```
 mem
-
 ```
 Проверяем состояние "заморозки"
 
 ```
-$sudo hdparm -I /dev/sdb | grep 'Model Number\|Serial 
-Number\|Firmware Revision\|frozen'
+$sudo hdparm -I /dev/sdb | grep 'Model Number\|Serial Number\|Firmware Revision\|frozen'
 ```
 
 ```
         Model Number:       ST3500514NS                             
         Serial Number:      9WJ0HN29
         Firmware Revision:  SN11    
-        not     frozen
+        ***not     frozen***
 ```
 Смотрим количество используемых/доступных блоков
 ```
