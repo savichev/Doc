@@ -4,7 +4,7 @@
 ```bash
 $sudo hdparm -I /dev/sdb | grep 'Model Number\|Serial Number\|Firmware Revision\|frozen'
 ```
->       Model Number:       ST3500514NS                             
+       Model Number:       ST3500514NS                             
         Serial Number:      9WJ0HN29
         Firmware Revision:  SN11    
         **not     frozen**
@@ -19,9 +19,8 @@ $sudo hdparm -I /dev/sdb | grep 'Model Number\|Serial Number\|Firmware Revision\
 ```bash
 $ echo mem | sudo tee /sys/power/state
 ```
-```
-mem
-```
+>mem
+
 Проверяем состояние "заморозки"
 
 ```
