@@ -22,9 +22,6 @@ $sudo hdparm -I /dev/sdb | egrep 'Model Number|Serial Number|frozen|LBA48|Sector
 $ echo mem | sudo tee /sys/power/state
 ```
 
-        mem
-
-
 Проверяем состояние "заморозки"
 
 ```bash
