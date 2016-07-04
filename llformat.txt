@@ -1,6 +1,6 @@
 Ищем свое устройство (в данном случае это sdb) и удостоверяемся, что оно "не 
 заморожено" (not     frozen)
-```
+```bash
 $sudo hdparm -I /dev/sdb | grep 'Model Number\|Serial 
 Number\|Firmware Revision\|frozen'
 
