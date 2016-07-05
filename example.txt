@@ -1,0 +1,16 @@
+# 7/2/14: Example batch script to update multiple hard drives in Windows with minimal user interaction .
+
+cd C:\Users\Administrator\Desktop\CmdTool2\CmdTool2\Windows
+
+CmdTool2.exe -pdfwdownload -physdrv[20:0] -f C1F0.bin -a0
+CmdTool2.exe -pdfwdownload -physdrv[20:1] -f C1F0.bin -a0
+CmdTool2.exe -pdfwdownload -physdrv[20:2] -f C1F0.bin -a0
+CmdTool2.exe -pdfwdownload -physdrv[20:3] -f C1F0.bin -a0
+CmdTool2.exe -pdfwdownload -physdrv[20:4] -f C1F0.bin -a0
+CmdTool2.exe -pdfwdownload -physdrv[20:5] -f C1F0.bin -a0
+CmdTool2.exe -pdfwdownload -physdrv[20:7] -f C650.bin -a0
+
+
+# The commands above update the drives located in slots 0-5 to the firmware revision C1F0 and the drive in slot 7 to C650 (both Sunset Cove drive firmware).
+
+# This example needs the .bat extension at the end (the "user-friendly" conglomerate that is Google doesn't allow .bat uploads on their wiki)
