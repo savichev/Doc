@@ -1,0 +1,28 @@
+http://lists.us.dell.com/pipermail/linux-poweredge/2010-April/042003.html
+
+> This might be of some use - I've updated a ST31000340NS (ES.2  1TB 
+> version) under Linux to MA0D using hdparm v9.27's --fwdownload switch on 
+> Debian 5.  You have to strip the first 256 bytes of Dell header from the 
+> start of the Dell update binary using dd bs=256 skip=1 ...
+
+You're the man!! Your method worked like a charm (after rebooting in a clean, 
+live environment).
+These are the steps I did to update the SATA HD firmware on my Dell R410 
+without SAS controller and in Debian:
+
+1) boot the server from a live CD (Ubuntu 9.10 in my case)
+2) downloaded from packages.debian.org the Sid package of hdparm (v9.27)
+3) installed it in the Ubuntu live session
+4) downloaded the firware from support.dell.com and unpacked it
+5) dd if=payload/MA0D.fw of=payload/MA0D.lod bs=256 skip=1
+6) hdparm --fwdownload payload/MA0D.lod /dev/sda
+7) then added the extra switches that hdparm needs to follow with this 
+dangerous operation
+8) firmware updated!
+
+Just to mention that I did the first hdparm --fwdownload with the HD *working* 
+(I was using the system installed on it, not a live one) and the updated 
+failed (due to the disk disconnecting from the SATA bus) but the disk worked 
+without problem. No fried disk, no bricking at all.
+
+Thanks again, tim!
